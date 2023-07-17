@@ -1,69 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/panel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <script type="module" src="./assets/js/script.js" defer></script>
     <title>MP3 PLAYER</title>
 </head>
+
 <body>
     <div class="application">
         <div class="nav">
-            <i class="fa-solid fa-bars"></i>
             <img src="assets/img/logo2.png">
         </div>
         <div class="content">
-            <div class="img">
-                <img src="assets/img/cactusfont.jpeg">
-                <img src="assets/img/clandestina.jpg">
-                <img src="assets/img/payday.jpg">
-            </div>
-            <div class="title">
-                <h2>COULEUR CACTUS</h2>
-                <span>GOOD BANA</span>
-                <small>RAP / RNB</small>
-            </div>
-            <div class="barre">
-                <div class="barre_"></div>
-                <div class="time">
-                    <span>0</span>
-                    <span>3:26</span>
-                </div>
-            </div>
+            <div id="slider" class="img">
+            </div> <!-- End Div slider -->
         </div>
-
-        <div class="buttons">
-            <img src="assets/img/Sans titre-1.png">
-            <img src="assets/img/after.png" id="before" onclick="changeImage('before')">
-            <img src="assets/img/play.png">
-            <img src="assets/img/next.png" id="next" onclick="changeImage('after')">
-            <img src="assets/img/boucle.png">
-        </div>
-    </div>
-
-    <script>
-        var currentImageIndex = 0;
-        var images = document.querySelectorAll('.img img');
-
-        // Masquer toutes les images sauf la première au chargement de la page
-        for (var i = 1; i < images.length; i++) {
-            images[i].style.display = 'none';
-        }
-
-        function changeImage(direction) {
-            if (direction === 'before') {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            } else if (direction === 'after') {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-            }
-
-            for (var i = 0; i < images.length; i++) {
-                images[i].style.display = 'none';
-            }
-
-            images[currentImageIndex].style.display = 'block';
-        }
-    </script>
+    </div> <!-- end -->
 </body>
+
 </html>

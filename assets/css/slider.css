@@ -1,0 +1,37 @@
+#slider img {
+    vertical-align: bottom;
+    border-radius: 2%;
+    width: 100%;
+
+}
+
+#slider {
+    position: relative;
+    width: 30%;
+
+}
+#slider p{
+    font-size: 1.25em;
+}
+
+#imageA,
+#texteA,
+#imageB,
+#texteB {
+    position: absolute;
+
+}
+
+#imageA,
+#imageB {
+    width: 100%;
+}
+
+.trans {
+    transition: all .5s;
+}
+
+.swipeLeft {
+    transform: translateX(-100%);
+
+}
