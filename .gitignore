@@ -1,0 +1,4 @@
+*.mp3
+.env
+/asstets/img/mySecretPic.jpg
+/asstets/mySecretFile/
